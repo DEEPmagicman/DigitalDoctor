@@ -99,19 +99,19 @@ public class prescription extends AppCompatActivity {
         paint.setTextSize(15.5f);
         paint.setColor(Color.rgb(0,50,250));
 
-        canvas.drawText("Digital Raj Gandhi", 20, 20,paint);
+        canvas.drawText("Digital Doctor", 20, 20,paint);
         paint.setTextSize(8.5f);
-        canvas.drawText("Address : Mars hole ",20,40,paint);
+        canvas.drawText("Address : 101, Sai Residence",20,40,paint);
         canvas.drawText("Surat , 395002",20,55,paint);
         forLinePaint.setStyle(Paint.Style.STROKE);
         forLinePaint.setPathEffect(new DashPathEffect(new float[]{5,5},0));
         forLinePaint.setStrokeWidth(2);
         canvas.drawLine(20,65,230,65,forLinePaint);
 
-        canvas.drawText("Patient Name ",20,80,paint);
+        canvas.drawText("Patient Name : ",20,80,paint);
         canvas.drawLine(20,90,250,90,forLinePaint);
 
-        canvas.drawText("By Dr. Raj Gandhi:",20,105,paint);
+        canvas.drawText("By Dr. Nirmal Mehta",20,105,paint);
 
         canvas.drawText("Illness "+ill.getText(),20,125,paint);
         canvas.drawText("Prescription: ",20,145,paint);
