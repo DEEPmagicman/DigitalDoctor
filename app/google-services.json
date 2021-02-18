@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1075502440797",
+    "project_id": "digitaldoctor-f804d",
+    "storage_bucket": "digitaldoctor-f804d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075502440797:android:670b5a7b7d350f9cfac8b4",
+        "android_client_info": {
+          "package_name": "com.example.digitaldoctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075502440797-5oaujckqn6r174jl1e92f15jne2vljp8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwqGTXFxjLNOQRcvjTWDyM9Hyy23C-i1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075502440797-5oaujckqn6r174jl1e92f15jne2vljp8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
