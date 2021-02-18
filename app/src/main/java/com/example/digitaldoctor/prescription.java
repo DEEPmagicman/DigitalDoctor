@@ -39,7 +39,6 @@ public class prescription extends AppCompatActivity {
     @SuppressLint("SimpleDateFormat")
     SimpleDateFormat datePatternformat = new SimpleDateFormat("dd-mm-yyyy hh:mm a");
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
@@ -101,7 +100,7 @@ public class prescription extends AppCompatActivity {
 
         canvas.drawText("Digital Doctor", 20, 20,paint);
         paint.setTextSize(8.5f);
-        canvas.drawText("Address : 101, Sai Residence",20,40,paint);
+        canvas.drawText("Address : 101, Sai Residency,",20,40,paint);
         canvas.drawText("Surat , 395002",20,55,paint);
         forLinePaint.setStyle(Paint.Style.STROKE);
         forLinePaint.setPathEffect(new DashPathEffect(new float[]{5,5},0));
@@ -113,27 +112,27 @@ public class prescription extends AppCompatActivity {
 
         canvas.drawText("By Dr. Nirmal Mehta",20,105,paint);
 
-        canvas.drawText("Illness "+ill.getText(),20,125,paint);
-        canvas.drawText("Prescription: ",20,145,paint);
+        canvas.drawText("Illness : "+ill.getText(),20,125,paint);
+        canvas.drawText("Prescription : ",20,145,paint);
         canvas.drawText(" "+p1.getText(),100,145,paint);
         canvas.drawText(" "+p2.getText(),100,155,paint);
         canvas.drawText(" "+p3.getText(),100,165,paint);
         canvas.drawText(" "+p4.getText(),100,175,paint);
-        canvas.drawText("Discription: ",20,195,paint);
+        canvas.drawText("Discription : ",20,195,paint);
         canvas.drawText(" "+discription.getText(),20,205,paint);
 
         canvas.drawLine(20,210,230,210,forLinePaint);
 
-        canvas.drawText("Date: "+datePatternformat.format(new Date().getTime()),20,260,paint);
+        canvas.drawText("Date : "+datePatternformat.format(new Date().getTime()),20,260,paint);
         canvas.drawText(String.valueOf(dpriscriptionNo+1),20,275,paint);
-        canvas.drawText("Payment Method: Cash",20,290,paint);
+        canvas.drawText("Payment Method : Cash",20,290,paint);
 
         paint.setTextAlign(Paint.Align.CENTER);
         paint.setTextSize(12f);
         canvas.drawText("Get Well Soon!",canvas.getWidth()/2,320,paint);
 
         myPdfDocument.finishPage(myPage);
-        File file = new File(this.getExternalFilesDir("/"),"Prescription.pdf");
+        File file = new File(this.getExternalFilesDir("/"),dpriscriptionNo+" Prescription.pdf");
 
         try {
             myPdfDocument.writeTo(new FileOutputStream(file));

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dadada"
+    tools:context=".OldRecord">
+
+    <EditText
+        android:id="@+id/oldPrintEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/oldPrintBtn"
+        android:layout_marginStart="33dp"
+        android:layout_toEndOf="@+id/oldPrintBtn"
+        android:ems="10"
+        android:hint="Prescription No"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/oldPrintBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/oldPrintBtn" />
+
+    <Button
+        android:id="@+id/oldPrintBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="PDF"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="20dp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
