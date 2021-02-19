@@ -10,6 +10,7 @@ import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.pdf.PdfDocument;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -108,7 +109,7 @@ public class prescription extends AppCompatActivity {
         canvas.drawLine(20,65,230,65,forLinePaint);
 
         canvas.drawText("Patient Name : ",20,80,paint);
-        canvas.drawLine(20,90,250,90,forLinePaint);
+        canvas.drawLine(20,90,230,90,forLinePaint);
 
         canvas.drawText("By Dr. Nirmal Mehta",20,105,paint);
 
@@ -132,7 +133,8 @@ public class prescription extends AppCompatActivity {
         canvas.drawText("Get Well Soon!",canvas.getWidth()/2,320,paint);
 
         myPdfDocument.finishPage(myPage);
-        File file = new File(this.getExternalFilesDir("/"),dpriscriptionNo+" Prescription.pdf");
+       // String url1 = Environment.getExternalStorageDirectory().getAbsolutePath();
+        File file = new File(  Environment.getExternalStorageDirectory().getAbsolutePath().concat("/Presentation.pdf"));
 
         try {
             myPdfDocument.writeTo(new FileOutputStream(file));
